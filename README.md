@@ -4,7 +4,6 @@ Ruby 2.2.3
 Rails 5.0.0.1
 
 ## Planning
----
   - What is the application?
   - Who is the application for?
   - User Stories
@@ -12,7 +11,6 @@ Rails 5.0.0.1
   - Think through the pages needed
 
 ## Questions
----
   1. What is the application?
      This application is my personal portfolio. A place where I can blog, share my
      work, share a bit about myself (including a resume), and offer a way for
@@ -42,23 +40,21 @@ Rails 5.0.0.1
             - Allow the admin to sign in to make changes
 
 ## User Stories
----
-  * As an *Admin*, I want to be able to create posts so that I can share what I am
+  * As an **Admin**, I want to be able to create posts so that I can share what I am
     learning on my blog.
-  * As an *Admin*, I want to be able to edit & destroy posts, so that I can manage
+  * As an **Admin**, I want to be able to edit & destroy posts, so that I can manage
     my blog.
-  * As an *Admin*, I want to be able to write posts in markdown format, so that it
+  * As an **Admin**, I want to be able to write posts in markdown format, so that it
     is easy for me to write posts.
-  * As an *Admin*, I want to be able to highlight the various syntax of code
+  * As an **Admin**, I want to be able to highlight the various syntax of code
     blocks that I share on my blog.
-  * As an *Admin*, I want to show the visitors and potential employers examples of
+  * As an **Admin**, I want to show the visitors and potential employers examples of
     my work, or stuff that I've built.
-  * As an *Admin*, I want to be able to have visitors contact me through a form on
+  * As an **Admin**, I want to be able to have visitors contact me through a form on
     my site.
-  * As an *Admin*, I want visitors to be able to leave comments on my blog posts.
+  * As an **Admin**, I want visitors to be able to leave comments on my blog posts.
 
 ## Data Model
----
   **Post**  
     title:string  
     content:text  
@@ -70,7 +66,6 @@ Rails 5.0.0.1
   name:string   
   email:string
 ## Pages Required
----
   - Home
   - About
   - Contact
