@@ -1,9 +1,10 @@
 Developer Portfolio Site
 ===
-Ruby 2.2.3 \
+Ruby 2.2.3  
 Rails 5.0.0.1
 
 ## Planning
+---
   - What is the application?
   - Who is the application for?
   - User Stories
@@ -20,25 +21,25 @@ Rails 5.0.0.1
      This application is for me, and for anyone looking to hire a developer with
      my skills. It is also for other developers interested in my articles.
   3. What features does it need?
-    - About Me
-      - A brief introduction to me and what I can do for anyone looking for a
+        - About Me
+            - A brief introduction to me and what I can do for anyone looking for a
         developer for their projects.
-    - Articles
-      - Create/Edit/Destroy (CRUD)
-      - Use Markdown
-      - Syntax highlighting
-      - Comments using Disqus
-    - Projects
-      - Create/Edit/Destroy
-      - Include Case Study
-      - Include Image
-        + iPhone, iPad, Desktop images (if applicable)
-    - Contact
-      - Simple contact form
-      - Sendgrid
-      - client/server side validation
-    - User Authentication
-      - Allow the admin to sign in to make changes
+        - Articles
+            - Create/Edit/Destroy (CRUD)
+            - Use Markdown
+            - Syntax highlighting
+            - Comments using Disqus
+        - Projects
+            - Create/Edit/Destroy
+            - Include Case Study
+            - Include Image
+                + iPhone, iPad, Desktop images (if applicable)
+        - Contact
+            - Simple contact form
+            - Sendgrid
+            - client/server side validation
+        - User Authentication
+            - Allow the admin to sign in to make changes
 
 ## User Stories
 ---
@@ -58,15 +59,16 @@ Rails 5.0.0.1
 
 ## Data Model
 ---
-  **Post**
-    title:string
-    content:text
-  **Project**
-    title:string
-    content:text
-    link:string
-  **User**
-
+  **Post**  
+    title:string  
+    content:text  
+  **Project**  
+    title:string  
+    content:text  
+    link:string  
+  **User**  
+  name:string   
+  email:string
 ## Pages Required
 ---
   - Home
