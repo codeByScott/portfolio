@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require sticky-footer
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
