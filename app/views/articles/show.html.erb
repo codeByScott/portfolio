@@ -9,7 +9,7 @@
       </time>  
     </p>
     <p class="article-content">
-      <%= @article.text %>
+      <%= markdown @article.text %>
     </p>
     <%= render 'disqus' %>
   </div>
