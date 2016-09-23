@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
-  get 'static/about'
-  get 'static/contact'
+  get 'about', to: 'static#about', as: 'about'
+  get 'contact', to: 'static#contact', as: 'contact'
 
   resources :articles
   root 'welcome#index'
