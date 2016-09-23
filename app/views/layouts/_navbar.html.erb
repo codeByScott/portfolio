@@ -1,9 +1,19 @@
 <header class="header">
   <h1 class="headline">Code  <small>by Scott</small></h1>
   <ul class="header-subnav">
-    <li><%= link_to 'Articles', articles_path %></li>
-    <li><a href="#" class="is-active">Projects</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    <li>
+      <%= link_to 'Articles', articles_path, 
+          class: "#{'is-active' if current_page?(articles_path)}" %>
+    </li>
+    <li>
+      <a href="#">Projects</a>
+    </li>
+    <li>
+      <%= link_to 'About', static_about_path, 
+          class: "#{'is-active' if current_page?(static_about_path)}" %>
+    </li>
+    <li>
+      <a href="#">Contact</a>
+    </li>
   </ul>
 </header>

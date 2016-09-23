@@ -112,6 +112,43 @@ main {
   }
 }
 
+// - - - - About Page - - - -
+.about-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+  border: 0.5em solid #f5f5f5;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+}
+
+// - - - - Article Show Page - - - -
+
+.article-title {
+  margin: 0 0 6px;
+  padding: 0;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 1.2em; 
+}
+
+.article-details {
+  line-height: 30px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  font-size: 18px;
+  p {
+    padding: 0;
+  }
+}
+
+.article-content {
+  margin-bottom: 24px;
+  line-height: 30px;
+}
+
 
 // - - - - Footer - - - -
 
