@@ -1,28 +1,23 @@
-<div class="row">
-  <article class="medium-6 medium-centered columns home">
-    <h1 class="title">Recent Articles</h1>
-    
-    <ul class="item-list" id="articles-list">
-      <% @articles.each do |article| %>
-        <li>
-          <h2 class="item-title"><%= article.title %></h2>
-          <p class="meta">
-            <time class="pubdate updated" datetime="">
-              <%= article.created_at.strftime("%B %e, %Y ") %>
-            </time>
-            <%= link_to '5 comments', article_path(article),
-                                      class: "comment-count" %>
-          </p>
-          <p>
-            <%= truncate article.text, length: 500 %>
-          </p>
-          <%= link_to 'Show', article_path(article) %>
-          <%= link_to 'Edit', edit_article_path(article) %>
-          <%= link_to 'Destroy', article_path(article), 
-                                   method: :delete, 
-                                   data: { confirm: 'Are you sure?' } %>
-        </li>
-      <% end %>
-    </ul>
-  </article>
-</div>
+<article class="small-12 medium-10 medium-centered large-6 columns">
+  <h1 class="basic-title">Recent Articles</h1>
+  
+  <ul class="article-list" id="article-list">
+    <% @articles.each do |article| %>
+      <li>
+        <h2 class="article-title">
+          <%= link_to article.title, article_path(article) %>
+        </h2>
+        <p class="meta">
+          <time class="pubdate updated" datetime="">
+            <%= article.created_at.strftime("%B %e, %Y ") %>
+          </time>
+          <%= link_to '5 comments', article_path(article),
+                                    class: "comment-count" %>
+        </p>
+        <p class="article-content">
+          <%= truncate article.text, length: 500 %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+</article>

@@ -1,16 +1,20 @@
-<div class="row">
-  <div class="medium-6 medium-centered column">
-    <h1 class="article-title text-center">
-      <%= @article.title %>
-    </h1>
-    <p class="article-details text-center">
-      <time class="pubdate updated" datetime="<%= @article.created_at %>"itemprop="datePublished">
-        <%= @article.created_at.strftime("%B %e, %Y ") %>
-      </time>  
-    </p>
-    <p class="article-content">
-      <%= markdown @article.text %>
-    </p>
-    <%= render 'disqus' %>
-  </div>
+<div class="small-12 small-centered medium-10 large-6 column">
+  <h1 class="feature-title text-center">
+    <%= @article.title %>
+  </h1>
+
+  <p class="article-details text-center">
+    <time class="pubdate updated" datetime="<%= @article.created_at %>"itemprop="datePublished">
+      <%= @article.created_at.strftime("%B %e, %Y ") %>
+    </time>  
+  </p>
+  <p class="article-content">
+    <%= markdown @article.text %>
+  </p>
+  <%= render 'disqus' %>
+  <%= link_to 'Show', article_path(@article) %>
+  <%= link_to 'Edit', edit_article_path(@article) %>
+  <%= link_to 'Delete', article_path(@article), 
+                                 method: :delete, 
+                                 data: { confirm: 'Are you sure?' } %>
 </div>
