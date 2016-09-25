@@ -13,7 +13,8 @@
           class: "#{'is-active' if current_page?(articles_path)}" %>
     </li>
     <li>
-      <a href="#">Projects</a>
+      <%= link_to 'Projects', projects_path, 
+          class: "#{'is-active' if current_page?(projects_path)}" %>
     </li>
     <li>
       <%= link_to 'About', about_path, 

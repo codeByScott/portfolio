@@ -176,6 +176,56 @@ main {
   min-height: 250px;
 }
 
+// - - - - Projects Index Page - - - -
+
+.projects-index-list {
+  background: #fff;
+  padding: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  h2 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 0.5rem 0;
+    @media only screen and (max-width: 64em) {
+      padding-top: 1rem;
+    }
+  }
+  h6 {
+    color: $highlight;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 0.875rem;
+    font-weight: bold;
+    padding: 0 0 0.5rem 0;
+  }
+  p {
+    font-size: 0.875rem;
+    line-height: 1.2rem;
+    margin: 0;
+    padding: 0.875rem 0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+  }
+  img {
+    border: 1px solid #999;
+    width: 100%;
+    height: auto;
+  }
+  .polaroid {
+    backgound-color: #f5f5f5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .button {
+    font-weight: bold;
+    color: $highlight;
+    background: transparent;
+    padding-left: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+}
 
 // - - - - Footer - - - -
 
