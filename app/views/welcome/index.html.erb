@@ -9,42 +9,25 @@
 <article class="small-12 medium-6 large-6 columns home">
   <h2 class="basic-title home-title">Recent Articles</h2>
   <ul class="article-list" id="article-list">
-    <li>
-      <h3 class="article-title">
-        <a href="#">Three Awesome Conditional Statements for Your Portfolio</a>
-      </h3>
-      <p class="meta">
-        <time class="pubdate updated" datetime="">September 20, 2016</time>
-      </p>
-      <p>
-        Design to the data. That’s the mantra of modern, research-driven web designers. But blindly accepting statistics and studies at face value is delusional at best, irresponsible at worst. Former journalist and current design specialist Dan Turner says be a skeptic. And don’t let fear of math, or innumeracy, stop you from running the numbers. Just Go.
-      </p>
-    </li>
-    <li>
-      <h3 class="article-title">
-        <a href="#">Authentication Made Easy</a>
-      </h3>
-      <p class="meta">
-        <time class="pubdate updated" datetime="">September 13, 2016</time>
-        <a href="#" class="comment-count">5 Comments</a>
-      </p>
-      <p>
-        Design to the data. That’s the mantra of modern, research-driven web designers. But blindly accepting statistics and studies at face value is delusional at best, irresponsible at worst. Former journalist and current design specialist Dan Turner says be a skeptic. And don’t let fear of math, or innumeracy, stop you from running the numbers. Just Go.
-      </p>
-    </li>
-    <li>
-      <h3 class="article-title">
-        <a href="#">Learn Vim on the Weekends</a>
-      </h3>
-      <p class="meta">
-        <time class="pubdate updated" datetime="">September 03, 2016</time>
-        <a href="#" class="comment-count">10 Comments</a>
-      </p>
-      <p>
-        Design to the data. That’s the mantra of modern, research-driven web designers. But blindly accepting statistics and studies at face value is delusional at best, irresponsible at worst. Former journalist and current design specialist Dan Turner says be a skeptic. And don’t let fear of math, or innumeracy, stop you from running the numbers. Just Go.
-      </p>
-    </li>
+    <% @articles.each do |article| %>
+      <li>
+        <h2 class="article-title">
+          <%= link_to article.title, article_path(article) %>
+        </h2>
+        <p class="meta">
+          <time class="pubdate updated" datetime="<%= article.created_at %>">
+            <%= article.created_at.strftime("%B %e, %Y ") %>
+          </time>
+          <%= link_to '5 comments', article_path(article),
+                                    class: "comment-count" %>
+        </p>
+        <p class="article-content">
+          <%= markdown article.text.truncate(200) %>
+        </p>
+      </li>
+    <% end %>
   </ul>
+
 </article>
 <div class="small-12 medium-6 large-3 columns home">
   <h2 class="basic-title home-title">Recent Projects</h2>

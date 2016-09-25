@@ -83,6 +83,9 @@ main {
     line-height: 1.55;
     margin-left: 0;
   }
+  li p {
+    margin: 0 0 1.5em 0;
+  }
   span {
     padding-top: 0;
   }
@@ -165,11 +168,6 @@ main {
   p {
     padding: 0;
   }
-}
-
-.article-content {
-  margin-bottom: 24px;
-  line-height: 30px;
 }
 
 // - - - - Forms - - - -
