@@ -32,29 +32,16 @@
 <div class="small-12 medium-6 large-3 columns home">
   <h2 class="basic-title home-title">Recent Projects</h2>
   <ul class="article-list" id="projects-list">
-    <li>
-      <h3 class="article-title">
-        <a href="#">12 in 12 Challenge</a>
-      </h3>
-      <p class="meta">
-        <time class="pubdate updated" datetime="">September 03, 2016</time>
-      </p>
-    </li>
-    <li>
-      <h3 class="article-title">
-        <a href="#">Event Site</a>
-      </h3>
-      <p class="meta">
-        <time class="pubdate updated" datetime="">September 03, 2016</time>
-      </p>
-    </li>
-    <li>
-      <h3 class="article-title">
-        <a href="#">Portfolio and Blog</a>
-      </h3>
-      <p class="meta">
-        <time class="pubdate updated" datetime="">September 03, 2016</time>
-      </p>
-    </li>
+    <% @projects.each do |project| %>
+      <li>
+        <h2 class="article-title">
+          <%= link_to project.title, project_path(project) %>
+        </h2>
+        <p class="meta">
+          <time class="pubdate updated" datetime="<%= project.created_at %>">
+            <%= project.created_at.strftime("%B %e, %Y ") %>
+          </time>
+      </li>
+    <% end %>
   </ul>
 </div>

@@ -1,11 +1,12 @@
 $header-bg: #0666e7; // blue
 $footer-bg: #45494d; // light-gray
 $highlight: #0666e7; // blue
+$text: #333; // dark
 
 
 // - - - - Global - - - - 
 h1, h2, h3, h4, h5, h6, p {
-  color: #333;
+  color: $text;
 }
 
 a {
@@ -172,8 +173,14 @@ main {
 
 // - - - - Forms - - - -
 
-.text-area {
-  min-height: 250px;
+// Contact Form
+.new_contact {
+  textarea {
+    height: 10em;
+  }
+  .button {
+    background-color: $highlight;
+  }
 }
 
 // - - - - Projects Index Page - - - -
@@ -185,6 +192,7 @@ main {
   margin-bottom: 2.5rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   h2 {
+    font-size: 1.9375rem;
     font-weight: normal;
     margin: 0;
     padding: 0 0 0.5rem 0;
@@ -215,7 +223,7 @@ main {
   }
   .polaroid {
     backgound-color: #f5f5f5;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   }
   .button {
     font-weight: bold;
@@ -239,7 +247,7 @@ main {
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    background-color: #292c2f; // #33383b; // #292c2f
+    background-color: #292c2f;
     border-radius: 2px;
     font-size: 1.5rem;
     color: #fff;
@@ -257,7 +265,7 @@ main {
   .footer-form {
     textarea, input {
       border-radius: 3px;
-      background-color: #292c2f; // #1f2022;
+      background-color: #292c2f;
       box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
       border: none;
       resize: none;
@@ -277,7 +285,7 @@ main {
     
     .submit {
       border-radius: 3px;
-      background-color: #292c2f;// #33383b;
+      background-color: #292c2f;
       color: #ffffff;
       border: 0;
       padding: 1rem 3.5rem;

@@ -1,6 +1,9 @@
+<% content_for :title do %>
+  Edit: <%= @article.title %>
+<% end %>
 
 <div class="medium-6 medium-centered column">
-  <h1>Edit article</h1>
+  <h1 class="basic-title">Edit: <%= @article.title %></h1>
 
   <%= render 'form' %>
 

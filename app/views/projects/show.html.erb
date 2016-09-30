@@ -1,8 +1,9 @@
+<% content_for :title do %>
+  <%= @project.title %>
+<% end %>
+
 <div class="small-12 small-centered medium-10 large-6 column">
-  <h1>Project Show</h1>
-  <h2><%= @project.title %></h2>
-  <h3><%= @project.subtitle %></h3>
-  <p class="lead"><%= @project.abstract %></h3>
+  <h1 class="basic-title">Case Study: <%= @project.title %></h1>
   <p><%= markdown @project.content %></p>
   <%= link_to 'See Project >>', @project.link %>
 </div>

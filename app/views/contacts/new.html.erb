@@ -1,0 +1,21 @@
+<% content_for :title do %>
+  Contact
+<% end %>
+
+<div class="large-6 large-centered column">
+  <h1 class="basic-title">Contact</h1>
+  
+  <%= form_for @contact do |f| %>
+    <%= render 'shared/error_messages' %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :message %>
+    <%= f.text_area :message %>
+
+    <%= f.submit 'Send Message', class: "button submit" %>
+  <% end %>
+</div>

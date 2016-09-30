@@ -1,20 +1,27 @@
+<% content_for :title do %>
+  Recent Projects
+<% end %>
+
 <div class="small-12 medium-10 medium-centered large-8 column">
-  <h1>Recent Projects</h1>
-  <article class="projects-index-list row">
-    <div class="large-6 columns">
-      <div class="row">
-        <div class="small-12 columns ">
-          <%= image_tag 'screenshot.jpeg', class: 'polaroid', alt: 'Code by Scott Home Page' %>
+  <h1 class="basic-title">Recent Projects</h1>
+  
+  <% @projects.each do |project| %>
+    <article class="projects-index-list row">
+      <div class="large-6 columns">
+        <div class="row">
+          <div class="small-12 columns ">
+            <%= image_tag 'screenshot.jpeg', class: 'polaroid', 
+                alt: "#{project.title} Screenshot" %>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="large-6 columns">
-      <h3>Code by Scott</h3>
-      <h6>My personal portfolio</h6>
-      <p>There’s nothing small about the effects on this “Mini” website and its use of scrolling as a fly-around of its eponymous car. The parallax steps aside on mobile for a neat intuitive image layout. The hamburger menu spins into action when clicked revealing a gorgeous dropdown.</p>
-      <a class="button" href="http://5-door.mini.com.au/">Read the Case Study »</a>
-    </div>
-  </article>
+      <div class="large-6 columns">
+        <h2><%= project.title %></h2>
+        <h6><%= project.subtitle %></h6>
+        <p><%= project.abstract %></p>
+        <%= link_to 'Read the Case Study »', project_path(project), 
+                                             class: 'button' %>
+      </div>
+    </article>
+  <% end %>
 </div>
-
-

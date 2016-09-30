@@ -1,7 +1,10 @@
 <!-- Consider writing a short story about my life, begin with a Tldr; brief -->
+<% content_for :title do %>
+  About
+<% end %>
 
 <div class="small-12 medium-10 medium-centered large-8 column">
-  <h1>About</h1>
+  <h1 class="basic-title">About</h1>
 
   <%= image_tag 'about_profile.jpeg', class: 'about-img' %>
 
@@ -52,7 +55,7 @@
   <p>
     If you have read this far and you think you would like to have someone
     like me on your team, 
-    <%= link_to 'please contact me', contact_path %>. 
+    <%= link_to 'please contact me', new_contact_path %>. 
     The best part is that I am super easy to work with, I bring zero drama,
     and I love to share my knowledge (what little I have) with others.
   </p>

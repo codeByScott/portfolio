@@ -2,7 +2,7 @@
   <div class="row">
     <div class="small-12 medium-6 medium-push-6 columns">
       <p class="logo show-for-small-only"><i class="fi-skull"></i> </p> 
-      <form class="footer-form">
+<!--       <form class="footer-form">
         <div class="row">
           <div class="medium-9 medium-push-3 columns">
             <label>
@@ -23,16 +23,16 @@
             </div>
           </div>
         </div>
-      </form>
+      </form> -->
     </div>
     <div class="small-12 medium-6 medium-pull-6 columns">
       <p class="logo hide-for-small-only"><i class="fi-skull"></i> Code by Scott</p> 
       <p class="footer-links">
-        <a href="#">Home</a>
-        <a href="#">Articles</a>
-        <a href="#">Projects</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'Articles', articles_path %>
+        <%= link_to 'Projects', projects_path %>
+        <%= link_to 'About', about_path %>
+        <%= link_to 'Contact', new_contact_path %>
       </p>
       <ul class="inline-list social">
         <a href="#"><i class="fi-social-twitter"></i></a>
