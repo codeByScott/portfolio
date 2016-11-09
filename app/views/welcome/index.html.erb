@@ -18,8 +18,9 @@
           <time class="pubdate updated" datetime="<%= article.created_at %>">
             <%= article.created_at.strftime("%B %e, %Y ") %>
           </time>
-          <%= link_to '5 comments', article_path(article),
+          <%= link_to "5 comments", article_path(article),
                                     class: "comment-count" %>
+
         </p>
         <p class="article-content">
           <%= markdown article.text.truncate(200) %>
