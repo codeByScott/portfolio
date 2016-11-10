@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'users/new'
+
   get 'about', to: 'static#about', as: 'about'
 
   resources :articles
