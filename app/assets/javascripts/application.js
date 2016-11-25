@@ -18,3 +18,14 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+// Responsive Navigation
+function responsive_nav() {
+  var x = document.getElementById("responsiveNav");
+  
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  }else  {
+    x.className = "topnav";
+  }
+}

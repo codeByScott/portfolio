@@ -39,7 +39,7 @@ $transition: all .35s ease-in-out;
   }
 }
 
-.header-subnav {
+.topnav {
   float: none;
   position: absolute;
   text-align: center;
@@ -72,6 +72,9 @@ $transition: all .35s ease-in-out;
     }
   }
 }
+
+// Hide the list item that contains the link that should open and close topnav on small screen
+ul.topnav li.icon { display: none; }
 
 // - - - - Main - - - -
 
@@ -355,3 +358,34 @@ main {
     margin-right: 0.5rem;
   }
 }
+
+@media screen and (max-width: 680px) {
+  ul.topnav li {display: none;}
+  ul.topnav li.icon {
+    position: fixed;
+    right: 0;
+    top: 0;
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  ul.topnav.responsive { 
+    margin-top: 50px;
+    position: relative; 
+  }
+
+
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #cacaca;
+  }
+}
+
