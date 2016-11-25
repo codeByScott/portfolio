@@ -5,6 +5,6 @@
 <div class="small-12 small-centered medium-10 large-6 column">
   <h1 class="basic-title">Case Study: <%= @project.title %></h1>
   <p><%= markdown @project.content %></p>
-  <%= link_to 'See Project >>', @project.link %>
+  <%= link_to 'View Project', @project.link, class: "hollow small expanded button" %>
 </div>
 
