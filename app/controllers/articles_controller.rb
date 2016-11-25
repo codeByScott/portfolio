@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :logged_in_user, only: [:new, :edit, :create, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     @articles = Article.all.order("created_at desc")
@@ -17,9 +19,10 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
 
     if @article.save
+      flash[:success] = "Article Created!"
       redirect_to @article
     else
       render 'new'
@@ -47,5 +50,10 @@ class ArticlesController < ApplicationController
 
     def article_params
       params.require(:article).permit(:title, :text)
+    end
+
+    def correct_user
+      @article = current_user.articles.find_by(id: params[:id])
+      redirect_to root_url if @article.nil?
     end
 end

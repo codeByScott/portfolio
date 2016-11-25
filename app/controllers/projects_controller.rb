@@ -1,4 +1,7 @@
 class ProjectsController < ApplicationController
+  before_action :logged_in_user, only: [:new, :edit, :create, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+
 
   def index
     @projects = Project.all.order("created_at desc")
@@ -17,9 +20,10 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
+    @project = current_user.projects.build(project_params)
 
     if @project.save
+      flash[:success] = "Project Added!"
       redirect_to @project
     else
       render 'new'
@@ -51,5 +55,10 @@ class ProjectsController < ApplicationController
                                       :abstract, 
                                       :content, 
                                       :link)
+    end
+
+    def correct_user
+      @project = current_user.projects.find_by(id: params[:id])
+      redirect_to root_url if @project.nil?
     end
 end

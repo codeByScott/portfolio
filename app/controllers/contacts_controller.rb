@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(secure_params)
     if @contact.valid?
       UserMailer.contact_email(@contact).deliver_now
-      flash[:notice] = "Your message has been sent!"
+      flash[:success] = "Your message has been sent!"
       redirect_to root_path
     else
       render :new

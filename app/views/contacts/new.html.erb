@@ -2,7 +2,7 @@
   Contact
 <% end %>
 
-<div class="large-6 large-centered column">
+<div class="large-6 large-centered columns">
   <h1 class="basic-title">Contact</h1>
   
   <%= form_for @contact, url: contacts_path do |f| %>
@@ -16,6 +16,6 @@
     <%= f.label :message %>
     <%= f.text_area :message %>
 
-    <%= f.submit 'Send Message', class: "button submit" %>
+    <%= f.submit 'Send Message', class: "hollow button" %>
   <% end %>
 </div>
