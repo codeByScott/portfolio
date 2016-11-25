@@ -2,24 +2,28 @@
 
 
 <div class="row">
-  <div class="medium-6 medium-offset-3 columns">
-    <h1>Sign up</h1>
+  <div class="medium-6 medium-centered large-4 large-centered columns">
+    
     <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages', object: @user %>
+      <div class="sessions-form">
+        <h4 class="text-center">Register</h4>
+        <%= render 'shared/error_messages', object: @user %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :name %>
+        <%= f.text_field :name, placeholder: "Sterling Archer" %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+        <%= f.label :email %>
+        <%= f.email_field :email, placeholder: "sterling007@example.com" %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+        <%= f.label :password %>
+        <%= f.password_field :password, placeholder: "Password" %>
 
-      <%= f.label :password_confirmation, "Password Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <%= f.label :password_confirmation, "Password Confirmation" %>
+        <%= f.password_field :password_confirmation, 
+                              placeholder: "Password Confirmation" %>
 
-      <%= f.submit "Create my account", class: "hollow button" %>
+        <%= f.submit "Create my account", class: "expanded button" %>
+      </div>
     <% end %>
   </div>
 </div>
