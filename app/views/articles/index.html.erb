@@ -1,10 +1,10 @@
 <% content_for :title do %>
-  My Articles
+  Development Articles
 <% end %>
 
-<article class="small-12 medium-10 medium-centered large-6 columns">
+<article class="small-12 medium-10 medium-centered large-8 columns">
   <h1 class="basic-title">My Articles</h1>
-  
+  <% if @articles.count > 0 %>
   <ul class="article-list" id="article-list">
     <% @articles.each do |article| %>
       <li>
@@ -23,5 +23,8 @@
       </li>
     <% end %>
   </ul>
+  <% else %>
+    <p>There are currently no articles.</p>
+  <% end %>
 </article>
 

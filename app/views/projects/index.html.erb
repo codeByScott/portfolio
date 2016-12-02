@@ -1,27 +1,30 @@
 <% content_for :title do %>
-  My Projects
+  Development Projects
 <% end %>
 
 <div class="small-12 medium-10 medium-centered large-8 column">
   <h1 class="basic-title">My Projects</h1>
-  
-  <% @projects.each do |project| %>
-    <article class="projects-index-list row">
-      <div class="large-6 columns">
-        <div class="row">
-          <div class="small-12 columns ">
-            <%= image_tag 'screenshot.jpeg', class: 'polaroid', 
-                alt: "#{project.title} Screenshot" %>
+  <% if @projects.count > 0 %>
+    <% @projects.each do |project| %>
+      <article class="projects-index-list row">
+        <div class="large-6 columns">
+          <div class="row">
+            <div class="small-12 columns ">
+              <%= image_tag 'screenshot.jpeg', class: 'polaroid', 
+                  alt: "#{project.title} Screenshot" %>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="large-6 columns">
-        <h2><%= project.title %></h2>
-        <h6><%= project.subtitle %></h6>
-        <p><%= project.abstract %></p>
-        <%= link_to 'Read the Case Study »', project_path(project), 
-                                             class: 'button' %>
-      </div>
-    </article>
+        <div class="large-6 columns">
+          <h2><%= project.title %></h2>
+          <h6><%= project.subtitle %></h6>
+          <p><%= project.abstract %></p>
+          <%= link_to 'Read the Case Study »', project_path(project), 
+                                               class: 'button' %>
+        </div>
+      </article>
+    <% end %>
+  <% else %>
+    <p>There are currently no projects.</p>
   <% end %>
 </div>

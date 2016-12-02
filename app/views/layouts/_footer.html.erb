@@ -2,7 +2,7 @@
   <div class="row">
     <div class="small-12 medium-6 medium-push-6 columns">
       <p class="logo show-for-small-only"><i class="fi-skull"></i> </p> 
-<!--       <form class="footer-form">
+<!--  <form class="footer-form">
         <div class="row">
           <div class="medium-9 medium-push-3 columns">
             <label>
@@ -26,7 +26,7 @@
       </form> -->
     </div>
     <div class="small-12 medium-6 medium-pull-6 columns">
-      <p class="logo hide-for-small-only"><i class="fi-skull"></i> Code by Scott</p> 
+      <p class="logo hide-for-small-only">Code by Scott</p> 
       <p class="footer-links">
         <%= link_to 'Home', root_path %>
         <%= link_to 'Articles', articles_path %>
@@ -36,10 +36,10 @@
       </p>
       <ul class="inline-list social">
         <a href="https://twitter.com/codebyscott"><i class="fi-social-twitter"></i></a>
-        <a href="https://www.facebook.com/jiujitsuscott"><i class="fi-social-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/codebyscott"><i class="fi-social-linkedin"></i></a>
         <a href="https://github.com/codeByScott"><i class="fi-social-github"></i></a>
       </ul>
-      <p class="copywrite">&copy; 2016 Code by Scott</p>
+      <p class="copywrite">&copy;<%= Date.today.year %> Scott Christensen</p>
     </div>
   </div>
 </footer>

@@ -3,45 +3,53 @@
   
   <p>I'm a designer &amp; developer currently living in Sasebo, Japan.</p>
   <p>As a full-time Dad to an energetic toddler, I spend my days balancing my fatherly duties and building applications.</p>
-  <p>I micro blog on <a href="www.twitter.com/jiujitsuscott">Twitter</a>, post videos on <a href="www.youtube.com/jiujitsuscott">YouTube</a>, and share my work on <a href="www.github.com/codebyscott">GitHub.</a></p>
+  <p>I micro blog on <a href="http://www.twitter.com/jiujitsuscott">Twitter</a>, post videos on <a href="http://www.youtube.com/jiujitsuscott">YouTube</a>, and share my work on <a href="http://www.github.com/codebyscott">GitHub.</a></p>
 </div>
 
 <article class="small-12 medium-6 large-6 columns home">
   <h2 class="basic-title home-title">Recent Articles</h2>
-  <ul class="article-list" id="article-list">
-    <% @articles.each do |article| %>
-      <li>
-        <h2 class="article-title">
-          <%= link_to article.title, article_path(article) %>
-        </h2>
-        <p class="meta">
-          <time class="pubdate updated" datetime="<%= article.created_at %>">
-            <%= article.created_at.strftime("%B %e, %Y ") %>
-          </time>
-         <span class="disqus-comment-count" data-disqus-identifier="<%= article.id %>"></span>
+  <% if @articles.count > 0 %>
+    <ul class="article-list" id="article-list">
+      <% @articles.each do |article| %>
+        <li>
+          <h2 class="article-title">
+            <%= link_to article.title, article_path(article) %>
+          </h2>
+          <p class="meta">
+            <time class="pubdate updated" datetime="<%= article.created_at %>">
+              <%= article.created_at.strftime("%B %e, %Y ") %>
+            </time>
+           <span class="disqus-comment-count" data-disqus-identifier="<%= article.id %>"></span>
 
-        </p>
-        <p class="article-content">
-          <%= markdown article.text.truncate(200) %>
-        </p>
-      </li>
-    <% end %>
-  </ul>
+          </p>
+          <p class="article-content">
+            <%= markdown article.text.truncate(200) %>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are currently no articles.</p>
+  <% end %>
 
 </article>
 <div class="small-12 medium-6 large-3 columns home">
   <h2 class="basic-title home-title">Recent Projects</h2>
-  <ul class="article-list" id="projects-list">
-    <% @projects.each do |project| %>
-      <li>
-        <h2 class="article-title">
-          <%= link_to project.title, project_path(project) %>
-        </h2>
-        <p class="meta">
-          <time class="pubdate updated" datetime="<%= project.created_at %>">
-            <%= project.created_at.strftime("%B %e, %Y ") %>
-          </time>
-      </li>
-    <% end %>
-  </ul>
+  <% if @projects.count > 0 %>
+    <ul class="article-list" id="projects-list">
+      <% @projects.each do |project| %>
+        <li>
+          <h2 class="article-title">
+            <%= link_to project.title, project_path(project) %>
+          </h2>
+          <p class="meta">
+            <time class="pubdate updated" datetime="<%= project.created_at %>">
+              <%= project.created_at.strftime("%B %e, %Y ") %>
+            </time>
+        </li>
+      <% end %>
+    </ul>
+    <% else %>
+      <p>There are currently no projects.</p>
+  <% end %>
 </div>
