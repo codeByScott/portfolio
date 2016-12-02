@@ -7,8 +7,8 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     @other_user = users(:archer)
   end
 
-  test "should get new" do
-    get users_new_url
+  test "should get new user registration" do
+    get '/register'
     assert_response :success
   end
 

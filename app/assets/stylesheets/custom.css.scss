@@ -31,7 +31,7 @@ $transition: all .35s ease-in-out;
   background-size: cover;
   position: relative;
   overflow: visible;
-  padding-top: $header-height;
+  padding-top: 2.5rem;
   padding-bottom: $header-height + ($subnav-link-padding * 2 + $subnav-font-size - 0.15rem);
   
   .headline {
